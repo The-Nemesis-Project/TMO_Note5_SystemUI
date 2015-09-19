@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/root_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/button_area" android:layout_width="fill_parent" android:layout_height="@dimen/keyguard_crop_view_button_height">
+        <Button android:textSize="17.0dip" android:textColor="#fffafafa" android:id="@id/cancel" android:background="@drawable/ripple_effect_drawable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/no" android:shadowColor="#b2000000" android:shadowDy="2.0" android:shadowRadius="2.0" android:layout_weight="1.0" />
+        <Button android:textSize="17.0dip" android:textColor="#fffafafa" android:id="@id/save" android:background="@drawable/ripple_effect_drawable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/wallpaper_crop_button_done" android:shadowColor="#b2000000" android:shadowDy="2.0" android:shadowRadius="2.0" android:layout_weight="1.0" />
+    </LinearLayout>
+    <View android:id="@id/divider" android:background="#7fd6d6d6" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="@dimen/keyguard_crop_view_button_height" />
+    <ProgressBar android:layout_gravity="center" android:id="@id/loading" android:background="@android:color/transparent" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:indeterminateOnly="true" style="@android:style/Widget.Holo.ProgressBar.Large" />
+    <LinearLayout android:id="@id/cropview_area" android:background="@drawable/lock_wallpaper_preview_shadow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="60.0dip" android:layout_marginRight="5.0dip">
+        <com.android.systemui.crop.CropView android:layout_gravity="center" android:id="@id/crop_view" android:layout_width="@dimen/keyguard_crop_view_width" android:layout_height="@dimen/keyguard_crop_view_height" />
+    </LinearLayout>
+    <com.android.systemui.crop.ScaledCropView android:id="@id/scale_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/lockscreen_preview" />
+    </com.android.systemui.crop.ScaledCropView>
+</FrameLayout>
