@@ -372,15 +372,15 @@
     .end local v9    # "timeText":Ljava/lang/String;
     .restart local v2    # "currentLanguage":Ljava/lang/String;
     :cond_6
-    const-string v10, "aa"
+    const-string v10, ""
 
     invoke-static {v10, v4}, Landroid/text/format/DateFormat;->format(Ljava/lang/CharSequence;Ljava/util/Calendar;)Ljava/lang/CharSequence;
 
-    move-result-object v10
+    move-result-object v11
 
     invoke-interface {v10}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
-    move-result-object v10
+    move-result-object v11
 
     iget-object v11, p0, Lcom/android/systemui/statusbar/policy/Clock$4;->this$0:Lcom/android/systemui/statusbar/policy/Clock;
 

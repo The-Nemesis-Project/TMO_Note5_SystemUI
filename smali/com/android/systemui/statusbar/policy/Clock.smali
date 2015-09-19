@@ -11,9 +11,9 @@
 
 .field private static final AM_PM_STYLE_GONE:I = 0x2
 
-.field private static final AM_PM_STYLE_NORMAL:I = 0x0
+.field private static final AM_PM_STYLE_NORMAL:I = 0x2
 
-.field private static final AM_PM_STYLE_SMALL:I = 0x1
+.field private static final AM_PM_STYLE_SMALL:I = 0x2
 
 .field private static final DEBUG:Z = true
 
